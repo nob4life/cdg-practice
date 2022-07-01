@@ -4,7 +4,9 @@ require './main.rb'
 RSpec.describe "Main" do
   it "greeting" do
     allow_any_instance_of(Kernel).to receive(:gets).and_return('Slava', 'Rusinov', "24")
-    expect(greeting).to eq('Привет Slava Rusinov. Самое время заняться делом!')
+    expect(greeting).to eq("Привет Slava Rusinov. Самое время заняться делом!")
+    allow_any_instance_of(Kernel).to receive(:gets).and_return('Slava', 'Rusinov', "17")
+    expect(greeting).to eq("Привет Slava Rusinov. Тебе меньше 18,но начать учиться программировать нигода не рано")
   end
 
   it "returns sum or second argument" do
