@@ -1,0 +1,17 @@
+require 'rspec'
+require './main.rb'
+
+RSpec.describe "Main" do
+  it "greeting" do
+    allow_any_instance_of(Kernel).to receive(:gets).and_return('Slava', 'Rusinov', "24")
+    expect(greeting).to eq("Привет Slava Rusinov. Самое время заняться делом!")
+    allow_any_instance_of(Kernel).to receive(:gets).and_return('Slava', 'Rusinov', "17")
+    expect(greeting).to eq("Привет Slava Rusinov. Тебе меньше 18,но начать учиться программировать нигода не рано")
+  end
+
+  it "returns sum or second argument" do
+    expect(foobar(2,3)).to eq(5)
+    expect(foobar(20,3)).to eq(3)
+    expect(foobar(3,20)).to eq(20)
+  end
+end
