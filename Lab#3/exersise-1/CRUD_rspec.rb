@@ -6,9 +6,9 @@ RSpec.describe 'Actors Management' do
     <<-STRING
     Hello
     Goodbye
-    czxcz
-    czxczx
-    xzczxcz
+    Report
+    Gazaring
+    People
     STRING
   end
 
@@ -18,9 +18,4 @@ RSpec.describe 'Actors Management' do
     expect{ index }.to output(string).to_stdout
   end
 
-  it '#find' do
-    expect{ find(1) }.to output(string).to eq("Goodbyu")
-  end
-
-  #
 end
