@@ -26,7 +26,7 @@ def update(id,name)
 
   file.close
   File.write(FILMS, File.read(BUFFER))
-#File.delete(BUFFER) if File.exist?(BUFFER)
+  File.delete(BUFFER) if File.exist?(BUFFER)
 end
 
 def delete(id)
@@ -42,5 +42,5 @@ def create(name)
   file.close
 end
 #create("Batman")
-puts find(3)
-#puts index
+puts update(3, "Macdonalds")
+puts index
