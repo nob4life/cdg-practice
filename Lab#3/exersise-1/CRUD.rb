@@ -26,7 +26,7 @@ def update(id,name)
 
   file.close
   File.write(FILMS, File.read(BUFFER))
-#File.delete(BUFFER) if File.exist?(BUFFER)
+  File.delete(BUFFER) if File.exist?(BUFFER)
 end
 
 def delete(id)
