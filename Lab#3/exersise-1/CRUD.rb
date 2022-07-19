@@ -42,5 +42,5 @@ def create(name)
   file.close
 end
 #create("Batman")
-puts update(3, "Macdonalds")
-puts index
+puts find(3)
+#puts index
